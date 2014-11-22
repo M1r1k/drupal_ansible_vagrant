@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
         end
     end
 
-    
+    config.vm.network :forwarded_port, guest: 22, host: 2222
+
     config.vm.synced_folder "../../ppl/dmjx", "/var/www", type: "nfs"
 end
