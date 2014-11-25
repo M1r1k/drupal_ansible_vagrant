@@ -26,4 +26,5 @@
     - geerlingguy.composer
     - geerlingguy.drush
     - geerlingguy.xdebug
+#    - m1r1k-solr-config
 

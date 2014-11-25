@@ -1,0 +1,8 @@
+---
+- name: Copy drupal specific solr configs to solr
+  copy: src={{ workspace }} dest={{ solr_path }}/example/multicore/{{ solr_cores[0] }}/conf/
+
+- name: Expand Solr.
+  command: >
+    tar -C {{ workspace }} -xvzf {{ workspace }}/{{ solr_filename }}.tgz
+    creates={{ workspace }}/{{ solr_filename }}/dist/{{ solr_filename }}.war
