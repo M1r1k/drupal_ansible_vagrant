@@ -36,13 +36,14 @@ TODO
  
  
 Installation
-1) Clone project somewhere to your machine
-2) Modify Vagrantfile
-  a) Modify synced_folder settings to your project root
-  b) Modify memory usage (Default is 4048 MB)
-  c) Modify domain name in ./ansible/vars/geerlingguy-apache.yml
-  d) Modify database name in ./ansible/vars/geerlingguy-mysql.yml (credentials are root/root)
-  e) Modify private VM network IP in Vagrantfile and ./ansible/inventories/dev
-3) Vagrant up
-4) Vagrant ssh
-5) Change /etc/hosts on your machine to use private VM network IP for your domain.
+- Clone project somewhere to your machine
+- Modify Vagrantfile
+  - Modify synced_folder settings to your project root
+  - Modify memory usage (Default is 4048 MB)
+  - Modify domain name in ./ansible/vars/geerlingguy-apache.yml
+  - Modify database name in ./ansible/vars/geerlingguy-mysql.yml (credentials are root/root)
+  - Modify private VM network IP in Vagrantfile and ./ansible/inventories/dev
+  - Modify VM name - v.name = "PROJECT_NAME"
+- Vagrant up
+- Vagrant ssh
+- Change /etc/hosts on your machine to use private VM network IP for your domain.
