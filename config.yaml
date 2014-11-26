@@ -1,0 +1,2 @@
+config:
+    synced_folder: "."
