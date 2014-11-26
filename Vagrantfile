@@ -1,3 +1,13 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+require 'yaml'
+
+dir = File.dirname(File.expand_path(__FILE__))
+
+configValues = YAML.load_file("#{dir}/config.yaml")
+data         = configValues['config']
+
 def which(cmd)
     exts = ENV['PATHEXT'] ? ENV['PATHEXT'].split(';') : ['']
     ENV['PATH'].split(File::PATH_SEPARATOR).each do |path|
@@ -32,5 +42,5 @@ Vagrant.configure("2") do |config|
 
     config.vm.network :forwarded_port, guest: 22, host: 2224
 
-    config.vm.synced_folder "../../ppl/dmjx", "/var/www", type: "nfs"
+    config.vm.synced_folder "#{data['synced_folder']}", "/var/www", type: "nfs"
 end
