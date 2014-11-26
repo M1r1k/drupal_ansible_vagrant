@@ -22,13 +22,13 @@ end
 Vagrant.configure("2") do |config|
 
     config.vm.provider :virtualbox do |v|
-        v.name = "ansible"
-        v.customize ["modifyvm", :id, "--memory", 4048]
+        v.name = "#{data['name']}"
+        v.customize ["modifyvm", :id, "--memory", "#{data['memory']}"]
     end
 
     config.vm.box = "ubuntu/trusty64"
     
-    config.vm.network :private_network, ip: "192.168.111.111"
+    config.vm.network :private_network, ip: "#{data['private_network']}"
     config.ssh.forward_agent = true
 
     # Ansible provisioning
@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
         end
     end
 
-    config.vm.network :forwarded_port, guest: 22, host: 2224
+    config.vm.network :forwarded_port, guest: 22, host: "#{data['forwarded_port']}"
 
-    config.vm.synced_folder "#{data['synced_folder']}", "/var/www", type: "nfs"
+    config.vm.synced_folder "#{data['synced_folder']['source']}", "#{data['synced_folder']['destination']}", type: "nfs"
 end

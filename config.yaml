@@ -1,2 +1,8 @@
 config:
-    synced_folder: "."
+  name: ansible
+  synced_folder:
+    source: "../../ppl/dmjx"
+    destination: "/var/www"
+  memory: "4000"
+  private_network: "192.168.111.111"
+  forwarded_port: "2224"

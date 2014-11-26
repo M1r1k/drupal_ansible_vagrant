@@ -1,0 +1,5 @@
+---
+  doc_root: /vagrant/build_mal
+  cache_update: true
+  sys_packages: ["vim","imagemagick", "zip", "htop"]
+  dist: precise

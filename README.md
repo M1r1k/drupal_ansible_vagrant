@@ -33,8 +33,7 @@ TODO
    - Everything into the memory
    - Something else?
  - Monitor everything (logs, performance, memory usage, etc)
- 
- 
+
 Installation
 - Clone project somewhere to your machine
 - Modify Vagrantfile
