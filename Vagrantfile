@@ -23,7 +23,8 @@ Vagrant.configure("2") do |config|
 
     config.vm.provider :virtualbox do |v|
         v.name = "#{data['name']}"
-        v.customize ["modifyvm", :id, "--memory", "#{data['memory']}"]
+        v.memory = "#{data['memory']}"
+        v.cpus = "#{data['cpus']}"
     end
 
     config.vm.box = "ubuntu/trusty64"
