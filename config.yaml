@@ -3,6 +3,7 @@ config:
   synced_folder:
     source: "../../ppl/dmjx"
     destination: "/var/www"
+  cpus: "4"
   memory: "4000"
   private_network: "192.168.111.111"
   forwarded_port: "2224"
