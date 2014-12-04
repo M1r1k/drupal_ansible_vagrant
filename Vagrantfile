@@ -44,5 +44,5 @@ Vagrant.configure("2") do |config|
 
     config.vm.network :forwarded_port, guest: 22, host: "#{data['forwarded_port']}"
 
-    config.vm.synced_folder "#{data['synced_folder']['source']}", "#{data['synced_folder']['destination']}", type: "nfs"
+    config.vm.synced_folder "#{data['synced_folder']['source']}", "#{data['synced_folder']['destination']}", type: "#{data['sync_type:']}"
 end
