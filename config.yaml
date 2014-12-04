@@ -7,3 +7,5 @@ config:
   memory: "4000"
   private_network: "192.168.111.111"
   forwarded_port: "2224"
+  sync_type: nfs
+  
