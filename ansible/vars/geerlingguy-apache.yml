@@ -1,5 +1,5 @@
 ---
-apache_listen_port: 80
+apache_listen_port: 81
 
 apache_vhosts:
-  - {servername: "dmjx.dev", documentroot: "/var/www"}
+  - {servername: "vm.dev", documentroot: "/var/www"}

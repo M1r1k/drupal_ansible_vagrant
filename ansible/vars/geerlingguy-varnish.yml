@@ -1,0 +1,3 @@
+---
+varnish_storage: "malloc,256M"
+varnish_default_backend_port: 81

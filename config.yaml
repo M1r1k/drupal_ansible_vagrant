@@ -1,11 +1,17 @@
 config:
+  # Machine name of this vagrant box that has to be unique for VM
   name: ansible
   synced_folder:
-    source: "../../ppl/dmjx"
+    # Path to local dir that should be synced inside VM
+    source: "../"
+    # Path to sycned local dir inside VM
     destination: "/var/www"
+  # Amount of CPU cores which could be used by this machine
   cpus: "4"
+  # Amount of RAM that could be used by this machine
   memory: "4000"
+  # IP to this vagrant box from your computer
   private_network: "192.168.111.111"
   forwarded_port: "2224"
   sync_type: nfs
-  
+
