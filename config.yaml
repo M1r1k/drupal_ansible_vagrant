@@ -11,7 +11,7 @@ config:
   # Amount of RAM that could be used by this machine
   memory: "4000"
   # IP to this vagrant box from your computer
-  private_network: "192.168.111.111"
-  forwarded_port: "2224"
+  private_network: "192.168.123.123"
+  forwarded_port: "2229"
   sync_type: nfs
 

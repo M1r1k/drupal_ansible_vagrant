@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: vm
   sudo: true
   vars:
     timezone: UTC
@@ -8,6 +8,7 @@
     - vars/geerlingguy-ruby.yml
     - vars/geerlingguy-apache.yml
     - vars/geerlingguy-varnish.yml
+    - vars/geerlingguy-solr.yml
     - vars/geerlingguy-xdebug.yml
     - vars/geerlingguy-mysql.yml
   roles:
